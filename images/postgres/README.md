@@ -10,8 +10,10 @@ docker pull postgres:17.5
 
 Create a container and run the image
 
+> [The postgres data location is different.](https://stackoverflow.com/a/76217607/16027098)
+
 ```bash
-docker run --name postgres-17_5 -h 127.0.0.1 -e POSTGRES_PASSWORD=db_postgres_pwd -d -p 5432:5432 -v postgres-17_5-data:/var/lib/postgres postgres:17.5
+docker run --name postgres-17_5 -h 127.0.0.1 -e POSTGRES_PASSWORD=db_postgres_pwd -d -p 5432:5432 -v postgres-17_5-data:/var/lib/postgresql/data postgres:17.5
 ```
 
 Breaking down the command
