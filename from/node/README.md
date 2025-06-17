@@ -46,4 +46,7 @@ CMD ["npm", "start"]
 >   ```
 >
 > - If your dependencies are purely JavaScript-based, installing in the build stage and copying the node_modules to the run stage reduces image size significantly.
->
+
+> [!IMPORTANT]
+> Don't set `-v` as the `WORKDIR`, otherwise the new release won't apply when reusing the volume.
+
